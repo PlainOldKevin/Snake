@@ -15,7 +15,7 @@ startx = 0
 # Create 'snake'
 for _ in range(3):
     s = Turtle("square")
-    s.color("white")
+    s.color("lime green")
     s.penup()
     s.goto(startx, 0)
     startx -= 20
