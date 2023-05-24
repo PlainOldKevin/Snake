@@ -1,11 +1,13 @@
 # Imports
 from turtle import Turtle, Screen
+import time
 
 # Create screen and give characteristics
 screen = Screen()
-screen.setup(600, 600)
+screen.setup(700, 600)
 screen.bgcolor("black")
 screen.title("Snake Game")
+screen.tracer(0)
 
 # List to hold snake parts (turtles)
 snake_blocks = []
@@ -29,6 +31,8 @@ while game_on:
     for snake in snake_blocks:
         snake.forward(20)
         screen.update()
+        time.sleep(0.1)
+        
 
 # Exit on click
 screen.exitonclick()
