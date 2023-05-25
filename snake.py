@@ -8,6 +8,7 @@ class Snake:
 
     # Init method
     def __init__(self) -> None:
+        # Define attributes
         self.snake_segments = []
         self.create()
         self.head = self.snake_segments[0]
