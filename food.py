@@ -1,7 +1,7 @@
 # Imports
 from turtle import Turtle
 
-class Food:
+class Food(Turtle):
     
     def __init__(self) -> None:
-        pass
+        super().__init__()
