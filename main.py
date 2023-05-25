@@ -29,10 +29,11 @@ game_on = True
 while game_on:
     # Move forward
     screen.update()
-    time.sleep(0.04)
+    time.sleep(0.05)
     
     # Detect collision with food
-    
+    if snake.head.distance(food) < 15:
+        food.move()
 
     snake.move()
 
