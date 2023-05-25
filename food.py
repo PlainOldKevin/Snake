@@ -2,10 +2,6 @@
 from turtle import Turtle
 import random as r
 
-# Constants
-XCOORDS = r.randint(-330, 330)
-YCOORDS = r.randint(-280, 280)
-
 class Food(Turtle):
     
     # Init method
@@ -17,4 +13,8 @@ class Food(Turtle):
         self.shapesize(0.5, 0.5)
         self.color("blue")
         self.speed("fastest")
-        self.goto(XCOORDS, YCOORDS)
+        self.goto(r.randint(-330, 330), r.randint(-280, 280))
+
+    # Function to move somewhere else on screen
+    def move(self):
+        self.goto(r.randint(-330, 330), r.randint(-280, 280))

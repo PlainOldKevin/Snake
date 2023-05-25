@@ -30,6 +30,9 @@ while game_on:
     # Move forward
     screen.update()
     time.sleep(0.04)
+    
+    # Detect collision with food
+    
 
     snake.move()
 
