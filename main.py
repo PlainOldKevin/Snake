@@ -27,7 +27,7 @@ game_on = True
 while game_on:
     # Move forward
     screen.update()
-    time.sleep(0.04)
+    time.sleep(0.035)
 
     snake.move()
 
