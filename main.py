@@ -1,6 +1,7 @@
 # Imports
 from turtle import Screen
 from snake import Snake
+from food import Food
 import time
 
 # Create screen and give characteristics
@@ -10,8 +11,9 @@ screen.bgcolor("black")
 screen.title("Snake Game")
 screen.tracer(0)
 
-# Initialize Snake
+# Initialize Snake and Food
 snake = Snake()
+food = Food()
 
 # Listen for snake movements
 screen.listen()
@@ -27,7 +29,7 @@ game_on = True
 while game_on:
     # Move forward
     screen.update()
-    time.sleep(0.035)
+    time.sleep(0.04)
 
     snake.move()
 
