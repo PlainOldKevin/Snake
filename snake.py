@@ -41,28 +41,28 @@ class Snake:
     # Function to move snake upwards
     def up(self):
         # Check if snake is going in opposite direction (no turning directly around)
-        if self.head.heading() == 270:
+        if self.head.heading() != 270:
             # Go up
             self.head.setheading(90)
 
     # Function to move snake downwards
     def down(self):
         # Check if snake is going in opposite direction (no turning directly around)
-        if self.head.heading() == 90:
+        if self.head.heading() != 90:
             # Go down
             self.head.setheading(270)
 
     # Function to move snake left
     def left(self):
         # Check if snake is going in opposite direction (no turning directly around)
-        if self.head.heading() == 0:
+        if self.head.heading() != 0:
             # Go left
             self.head.setheading(180)
     
     # Function to move snake right
     def right(self):
         # Check if snake is going in opposite direction (no turning directly around)
-        if self.head.heading() == 180:
+        if self.head.heading() != 180:
             # Go right
             self.head.setheading(0)
 
