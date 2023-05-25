@@ -2,6 +2,7 @@
 from turtle import Screen
 from snake import Snake
 from food import Food
+from scoreboard import Scoreboard
 import time
 
 # Create screen and give characteristics
@@ -11,9 +12,10 @@ screen.bgcolor("black")
 screen.title("Snake Game")
 screen.tracer(0)
 
-# Initialize Snake and Food
+# Initialize Snake, Food, Scoreboard
 snake = Snake()
 food = Food()
+scoreboard = Scoreboard()
 
 # Listen for snake movements
 screen.listen()
