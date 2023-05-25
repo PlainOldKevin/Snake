@@ -38,6 +38,12 @@ while game_on:
         food.move()
         scoreboard.increase_score()
 
+    # Detect collision with wall
+    if snake.head.xcor() > 330 or snake.head.xcor() < -330 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
+        game_on = False
+        scoreboard.game_over()
+
+    # Move snake
     snake.move()
 
 # Exit on click

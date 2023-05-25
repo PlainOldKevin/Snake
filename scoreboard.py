@@ -21,3 +21,8 @@ class Scoreboard(Turtle):
         self.score += 1
         self.clear()
         self.write(f"Score: {self.score}", align="center", font=SCOREBOARD_TEXT)
+
+    # Function to print 'Game Over' message
+    def game_over(self):
+        self.goto(0,0)
+        self.write("GAME OVER", align="center", font=SCOREBOARD_TEXT)
