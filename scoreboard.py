@@ -2,7 +2,7 @@
 from turtle import Turtle
 
 # Constants
-SCOREBOARD_TEXT = ('Courier', 18, 'normal')
+SCOREBOARD_TEXT = ('Courier', 18, 'bold')
 
 class Scoreboard(Turtle):
 
