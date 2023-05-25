@@ -10,7 +10,7 @@ screen.title("Snake Game")
 screen.tracer(0)
 
 # List to hold snake parts (turtles)
-snake_blocks = []
+snake_segments = []
 # Starting point
 startx = 0
 
@@ -21,18 +21,28 @@ for _ in range(3):
     s.penup()
     s.goto(startx, 0)
     startx -= 20
-    snake_blocks.append(s)
+    snake_segments.append(s)
 
 # Bool to check game state
 game_on = True
+
 # Start game
 while game_on:
     # Move forward
-    for snake in snake_blocks:
-        snake.forward(20)
+    screen.update()
+    time.sleep(0.3)
+
+    # For loop to make segments stay together, range params are 'start, stop, step'
+    for snake_seg in range(len(snake_segments) - 1, 0, -1):
+        # Find second to last snake segment's coordinates
+        newx = snake_segments[snake_seg - 1].xcor()
+        newy = snake_segments[snake_seg - 1].ycor()
+        # And move the last snake segment to its spot before moving second-to-last segment forward
+        # Keeps the snake together on screen
+        snake_segments[snake_seg].goto(newx, newy)
+        #Update screen
         screen.update()
-        time.sleep(0.1)
-        
+    snake_segments[0].forward(20)
 
 # Exit on click
 screen.exitonclick()
