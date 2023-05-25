@@ -1,5 +1,10 @@
 # Imports
 from turtle import Turtle
+import random as r
+
+# Constants
+XCOORDS = r.randint(-330, 330)
+YCOORDS = r.randint(-280, 280)
 
 class Food(Turtle):
     
@@ -12,3 +17,4 @@ class Food(Turtle):
         self.shapesize(0.5, 0.5)
         self.color("blue")
         self.speed("fastest")
+        self.goto(XCOORDS, YCOORDS)
