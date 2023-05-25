@@ -13,6 +13,13 @@ screen.tracer(0)
 # Initialize Snake
 snake = Snake()
 
+# Listen for snake movements
+screen.listen()
+screen.onkey(snake.up, "Up")
+screen.onkey(snake.down, "Down")
+screen.onkey(snake.left, "Left")
+screen.onkey(snake.right, "Right")
+
 # Bool to check game state
 game_on = True
 
@@ -20,7 +27,7 @@ game_on = True
 while game_on:
     # Move forward
     screen.update()
-    time.sleep(0.1)
+    time.sleep(0.04)
 
     snake.move()
 
