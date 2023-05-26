@@ -3,6 +3,7 @@ from turtle import Turtle
 
 # Constants
 MOVE_DISTANCE = 20
+START_POSITIONS = [(0, 0), (0, -20), (0, -40)]
 
 class Snake:
 
@@ -15,16 +16,22 @@ class Snake:
 
     # Function to create snake
     def create(self):
-        # Starting point
-        startx = 0
         # Build snake
-        for _ in range(3):
-            s = Turtle("square")
-            s.color("lime green")
-            s.penup()
-            s.goto(startx, 0)
-            startx -= 20
-            self.snake_segments.append(s)
+        for position in START_POSITIONS:
+            self.add_segment(position)
+
+    # Function to add a segment to the snake
+    def add_segment(self, position):
+        # Define snake segment attributes
+        s = Turtle("square")
+        s.color("lime green")
+        s.penup()
+        s.goto(position)
+        self.snake_segments.append(s)
+
+    # Function to extend snake on food collision
+    def grow(self):
+        self.add_segment(self.snake_segments[-1].position())
 
     # Function to move snake
     def move(self):
