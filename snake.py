@@ -3,7 +3,7 @@ from turtle import Turtle
 
 # Constants
 MOVE_DISTANCE = 20
-START_POSITIONS = [(0, 0), (0, -20), (0, -40)]
+START_POSITIONS = [(0, 0), (-20 ,0), (-40 ,0)]
 
 class Snake:
 
@@ -74,4 +74,11 @@ class Snake:
             # Go right
             self.head.setheading(0)
 
+    # Function to reset snake to start
+    def reset(self):
+        for seg in self.snake_segments:
+            seg.goto(1000, 1000)
+        self.snake_segments.clear()
+        self.create()
+        self.head = self.snake_segments[0]
         
