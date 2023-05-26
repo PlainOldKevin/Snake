@@ -47,6 +47,12 @@ while game_on:
         game_on = False
         scoreboard.game_over()
 
+    # Detect collision with tail
+    for seg in snake.snake_segments[1:]:
+        if snake.snake_segments.distance(seg) < 10:
+            game_on = False
+            scoreboard.game_over()
+
     # Move snake
     snake.move()
 
