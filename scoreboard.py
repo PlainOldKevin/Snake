@@ -14,7 +14,7 @@ class Scoreboard(Turtle):
         self.score = 0
         
         # Open data file and define highscore
-        with open(r"C:\Users\Kevin\python-projects\Snake\data.txt") as data:
+        with open("data.txt") as data:
             self.highscore = int(data.read())
 
         self.color("white")
