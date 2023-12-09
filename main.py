@@ -34,7 +34,7 @@ while game_on:
     time.sleep(0.05)
     
     # Detect collision with food
-    if snake.head.distance(food) < 15:
+    if snake.head.distance(food) < 17:
         # Move food to new spot on screen
         food.move()
         # Grow snake 1 segment
